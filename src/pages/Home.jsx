@@ -17,26 +17,39 @@ function Home() {
   return (
     <div className="bg-gray-900 text-gray-100">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-20 px-6 text-center">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">
-          Rent Fashion. Or Rent Yours Out.
-        </h1>
-        <p className="text-lg text-gray-300 mb-6">
-          Discover trending styles to rent — or list your own wardrobe and start earning.
-        </p>
-        <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <a
-            href="/services"
-            className="bg-blue-500 px-6 py-2 rounded hover:bg-blue-600 transition"
-          >
-            Rent Clothes
-          </a>
-          <a
-            href="/list-your-clothes"
-            className="border border-blue-400 px-6 py-2 rounded text-blue-400 hover:bg-blue-800 transition"
-          >
-            Give on Rent
-          </a>
+      <section className="relative h-[70vh] w-full bg-gray-900 text-white">
+        {/* Background Image */}
+        <img
+          src="/images/hero-fashion.jpg"
+          alt="Fashion Banner"
+          className="absolute inset-0 w-full h-full object-cover brightness-75"
+        />
+
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/60"></div>
+
+        {/* Content */}
+        <div className="relative z-10 flex flex-col justify-center items-center h-full px-6 text-center">
+          <h1 className="text-4xl md:text-6xl font-extrabold mb-4 leading-tight drop-shadow">
+            Rent, Wear, Repeat
+          </h1>
+          <p className="text-lg md:text-xl text-gray-300 mb-6 max-w-2xl drop-shadow">
+            Discover trending styles to rent — or list your own wardrobe and start earning.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <a
+              href="/services"
+              className="bg-blue-500 px-6 py-3 rounded-md text-white hover:bg-blue-600 transition"
+            >
+              Rent Clothes
+            </a>
+            <a
+              href="/list-your-clothes"
+              className="border border-blue-400 px-6 py-3 rounded-md text-blue-400 hover:bg-blue-700 hover:text-white transition"
+            >
+              Give on Rent
+            </a>
+          </div>
         </div>
       </section>
 

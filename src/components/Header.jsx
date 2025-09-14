@@ -6,9 +6,12 @@ function Header() {
     <header className="top-0 z-50 flex justify-between items-center p-4 bg-gray-800 shadow-md">
       {/* Left: Logo + Brand */}
       <div className="flex items-center space-x-3">
-        <img src="/logo.png" alt="logo" className="w-10 h-10 object-cover" />
-        <h1 className="text-3xl font-bold text-white underline">Cloth Rental</h1>
+        <img src="/logo.jpg" alt="logo" className="w-10 h-10 object-cover" />
+        <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+          StyleSwap
+        </h1>
       </div>
+
 
       {/* Center: Navigation + Search */}
       <div className="flex items-center space-x-6">
@@ -88,7 +91,7 @@ function Header() {
       </div>
 
       {/* Right-side buttons */}
-      <div className="flex space-x-4">
+      {/* <div className="flex space-x-4">
         <NavLink to="/login">
           <button className="px-4 py-2 border border-blue-400 text-blue-400 rounded hover:bg-blue-700 transition-colors">
             Login
@@ -99,7 +102,20 @@ function Header() {
             Sign Up
           </button>
         </NavLink>
+      </div> */}
+      {/* Right-side: User Profile */}
+      <div className="flex items-center space-x-3 bg-gray-700 p-2 rounded-md">
+        <img
+          src="/profile.png"
+          alt="Profile"
+          className="w-10 h-10 rounded-full object-cover border border-gray-600"
+        />
+        <div className="text-right">
+          <p className="text-sm text-gray-300">Welcome back,</p>
+          <h4 className="text-lg font-semibold text-white">Jeet</h4>
+        </div>
       </div>
+
     </header>
   );
 }
